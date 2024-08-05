@@ -48,11 +48,17 @@
 
         <ListView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="330dp"
             android:layout_marginTop="15dp"
             android:id="@+id/Lista"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Menu"
+            android:text="Menú"/>
 
 
     </LinearLayout>

@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         Video2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), Video.class);
+                Intent i = new Intent(getApplicationContext(), VideoSurface.class);
                 startActivity(i);
             }
         });

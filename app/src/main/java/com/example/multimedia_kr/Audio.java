@@ -1,8 +1,10 @@
 package com.example.multimedia_kr;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -22,7 +24,7 @@ import java.io.IOException;
 public class Audio extends AppCompatActivity {
 
     ImageView imagen;
-    Button play, pausa, detener;
+    Button play, pausa, detener, menu;
     ListView lista;
     int n;
     String Musica;
@@ -37,6 +39,7 @@ public class Audio extends AppCompatActivity {
         pausa = findViewById(R.id.Pausar);
         lista = findViewById(R.id.Lista);
         detener = findViewById(R.id.Detener);
+        menu = findViewById(R.id.Menu);
 
         String[] audio = {"I'm the Villainess, So I'm Taming the Final Boss-Melody", "Mushikaburi-hime  - Let me love you"};
         String[] Music = {("android.resource://" + getPackageName() + "/" + R.raw.melody), ("android.resource://" + getPackageName() + "/" + R.raw.letmeloveyou)};
@@ -99,6 +102,14 @@ public class Audio extends AppCompatActivity {
                         mediaPlayer.stop();
                         n = 1;
                         Toast.makeText(getApplicationContext(), "Detener", Toast.LENGTH_LONG).show();
+                    }
+                });
+
+                menu.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                        startActivity(i);
                     }
                 });
 
